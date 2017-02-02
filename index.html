@@ -14,21 +14,21 @@
 </head>
 
 <body>
-	jumbotron
-	maindiv
-	instructions
-	<div id="thescore">thescore should be here</div>
-	current
-	<div id="theword"></div>
-	guesses remaining
-	<div id="remain"></div>
-	letters guessed
-	<div id="guessed"></div>
-
+	<div class="jumbotron">
+		<h1><strong>Who's That Pokemon?</strong></h1>
+		<p>Play Hangman and guess which Pokemon's name it could be!</p>
+	</div>
+	<div class="container" id="maingame">
+		<div class="gameblocks" id="thescore"></div><br>
+		<div class="gameblocks" id="theword"></div><br>
+		<div class="gameblocks" id="remain">Remaining Guesses: 10</div><br>
+		<div class="gameblocks" >Letters Guessed:</div>
+		<div class="gameblocks" id="guessed">  asdf </div>
+	</div>
 
 	<script>
 	$(document).ready(hangman.gameinit());
-	$(document).keypress(hangman.checkguess(event));
+ 	$(document).keypress( function(evt) { hangman.checkguess(evt) } );
 	</script>
 
 </body>

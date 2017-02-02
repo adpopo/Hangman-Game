@@ -1,7 +1,23 @@
-/*jumbotron
-	blue bkg
-	yellow bold as fuck font
+.jumbotron {
+	background-color: blue;
+	color: #ffcb05;
+	font-weight: 700;
+	background: linear-gradient(#3c5aa6, #0071b9, #3c5aa6);
+}
 
-body
-	white bkg
-	dark grey txt*/
+body{
+	text-align: center;
+	background-image: url("../images/pokepic.jpg");
+}
+
+.gameblocks{
+	font-size: 24pt;
+	font-weight: 700;
+	color: #666;
+}
+
+#maingame {
+	width : 860px;
+	background-color: #fff;
+	padding: 100px;
+}
