@@ -1,0 +1,35 @@
+<!doctype html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Who's That Pokemon?</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script
+ 	 src="https://code.jquery.com/jquery-3.1.1.js"
+ 	 integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+ 	 crossorigin="anonymous"></script>
+	<script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+	jumbotron
+	maindiv
+		instructions
+		<div id="thescore">thescore should be here</div>
+		current
+		<div id="theword"></div>
+		guesses remaining
+		<div id="remain"></div>
+		letters guessed
+		<div id="guessed"></div>
+
+
+	<script>
+	$(document).ready(hangman.gameinit());
+	$(document).on(keypress, hangman.checkguess(event));
+	//event listener
+	</script>
+
+</body>
