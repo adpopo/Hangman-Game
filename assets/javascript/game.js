@@ -13,7 +13,7 @@ var hangman = {
 	sounds : {
 		win: "assets/sounds/pika1.wav",
 		lose: "assets/sounds/pika2.wav",
-	    right: "assets/sounds/pika3.wav",
+	    right: "assets/sounds/pika3.mp3",
 	    wrong: "assets/sounds/pika4.wav"
 	},
 
@@ -33,7 +33,7 @@ var hangman = {
 			this.currentword.push(theword[i]);
 			this.printed.push("_");
 		}
-		document.getElementById("#thescore").innerHTML = "Score: " + this.score;
+		document.getElementById("thescore").innerHTML = "Score: " + this.score;
 		console.log(this.score);
 		this.printword();
 		this.printguessed();
@@ -52,7 +52,7 @@ var hangman = {
 		for( i=1; i<this.printed.length; i++){
 			wordgen = wordgen + " " + this.printed[i];
 		}
-		$("#theword").innerHTML = wordgen;
+		document.getElementById("theword").innerHTML = wordgen;
 	},
 
 	printguessed: function(){
@@ -61,15 +61,15 @@ var hangman = {
 		for( i=1; i<this.lettersguessed.length; i++){
 			printgen = printgen + " " + lettersguessed[i];
 		}
-		$("#guessed").innerHTML = printgen;
+		document.getElementById("guessed").innerHTML = printgen;
 	},
 
 	checkguess: function(event){
-		if (event.keyCode >= 65 && event.keyCode <= 90){
+		if (event.keyCode() >= 65 && event.keyCode() <= 90){
 
 			var gucci = false;
 			var notusedyet = true;
-			var guess = event.which.toLowerCase();
+			var guess = event.which().toLowerCase();
 
 			for( i=0; i<this.correct.length; i++){
 				if(guess==correct[i]){
@@ -121,7 +121,7 @@ var hangman = {
 					this.audioElement.setAttribute('src', this.sounds.wrong);
 					this.audioElement.play();
 					this.guessesremaining--;
-					$("#remain").innerHTML("Remaining guesses: " + this.guessesremaining);
+					document.getElementById("remain").innerHTML("Remaining guesses: " + this.guessesremaining);
 				}
 			}
 
